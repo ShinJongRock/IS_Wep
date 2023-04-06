@@ -11,14 +11,36 @@
     </header>
 </head>
 <body>
-    <form method="get" accept="학습예제">
+    <div>
+
+   
+    <form method="get" accept="학습예제" >
 
         <p><label>성명: <input name="name" ></label></p>
-        <p><label>성명: <input name="name" ></label></p>
-        ID : &nbsp; <input type="text"> <br>
+        <p><label>나이: <input name="name" name="age" type="number" ></label></p>
+        <p><button type="submit">전송</button></p>
+        <input type="text" name="id" size="50" value="텍스트">
+        <input type="password" name="password"  value="텍스트">
+
+        <!-- ID : &nbsp; <input type="text"> <br>
         PW : <input type="password">
-        <button>보내기</button>
+        <button>보내기</button> -->
+
+
+        <fieldset>
+            <legend>웹폼 요소</legend>
+            성명:<input type="text"><br/>
+            직업:<input type="text"><br/>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>웹폼 요소</legend>
+            <label for="name">성명</label>
+           <input type="text" name="name">
+           <input type="submit" value="확인"><br/>
+        </fieldset>
     </from>
-   
+</div>
 </body>
 </html>
