@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <form>
+<body style="display: flex; justify-content: center; flex-direction: column;">
+    <!-- <form>
         <fieldset>
             <legend> 직접 입력하세요           </legend>
             <textarea rows=" 3" cols="50" name="6-7"></textarea>
@@ -34,6 +34,8 @@
     <hr>
 
 
+
+
     <fieldset>
         <legend>직업 선택 하셈</legend>
         <select name="직업">
@@ -43,7 +45,140 @@
         </select>
        
 
+    </fieldset> -->
+    <h1> 주문서 정보</h1>
+
+    <br>
+
+
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="uname" class="title">이름</label>
+                    <input type="text" id="uname" placeholder="여백없이 입력" required>
+                </li>
+                <li>
+                    <label for="tel1" class="title">연락처</label>
+                    <input type="tel" id="tel1" placeholder="연락가능한 번호">
+                </li>
+                <li>
+                    <label for="tel1" class="title">홈페이지 <div style="padding: 30px;">(url)</div></label> 
+                    <input type="tel" id="tel1" placeholder="연락가능한 번호">
+                </li>
+            </ul>
+        </fieldset>
+
+
+        
+        <fieldset>
+        
+            <ul>
+                <li>
+                    <label for="uname" class="title">상품검색</label>
+                    <input type="text" id="uname" placeholder="여백없이 입력" required>
+                </li>
+           
+            </ul>
+        </fieldset>
+       
+
+  
+    <br>
+
+    <br>
+
+
+    
+    <fieldset>
+        <legend>주문정보</legend>
+ 
+
+        <ul>
+            <li>
+                <label for="uname" class="title">주문 색상</label>
+                <input type="text" id="uname" placeholder="여백없이 입력" required>
+            </li>
+            <li>
+                <label for="tel1" class="title">주문 개수</label>
+            
+            </li>
+            <br><br><br><br>
+            <li>
+                <label for="tel1" class="title">사이즈</label>
+                <input type="tel" id="tel1" placeholder="연락가능한 번호">
+            </li>
+        </ul>
+
+
+      
+
     </fieldset>
+    <br>
+    <fieldset>
+    <ol>
+        <div>주문일 <input type="text"> </div>
+
+    </ol>
+
+    </fieldset>
+    <br>
+    <fieldset>
+    
+        <div style="float: right;"> 
+            <input type="submit" value="쿼리 전송"> 
+             <input type="submit" value="원래대로">
+            </div>
+
+    </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 </body>
 </html>
+
+<style>
+    .container {
+        width:600px;
+        margin:0 auto;
+    }
+    ul { /* 순서없는 목록에 적용할 스타일 */
+        list-style-type: none; /* 불릿 없앰 */
+    }
+
+    label.title { /* class=title인 label에 적용할 스타일 */
+        font-weight: bold; /* 굵은 글자 */
+        width: 80px; /* 너비 80px */
+        float: left; /* 왼쪽부터 배치 */
+    }
+
+    div.centered { /* class=centered인 div에 적용할 스타일 */
+        text-align: center; /* 가운데 정렬 */
+    }
+
+    fieldset { /* 필드셋에 적용할 스타일*/
+        margin: 15px 10px; /* 상하 마진 15xp, 좌우 마진 10px */
+    }
+
+        fieldset legend { /* 필드셋의 제목 */
+            font-weight: bold; /* 굵은 글자 */
+            font-size: 18px; /* 글자 크기 18px */
+            color: purple; /* 글자색 자주 */
+        }
+
+    ul li { /* 목록의 각 항목 */
+        margin-bottom: 10px; /* 아래 마진 10px */
+    }
+</style>
