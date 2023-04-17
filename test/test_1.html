@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content"></div>
+  <video id="video" src="spv.mp4" autoplay muted loop></video>
+  <div class="content"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  height: 1000px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+video.playing {
+  opacity: 1;
+}
+
+</style>
+
+<script>
+  const video = document.getElementById("video");
+
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
+  const scrollTop = window.pageYOffset;
+  const videoHeight = video.offsetHeight;
+  const videoTop = video.offsetTop;
+
+  if (scrollTop > videoTop - videoHeight && scrollTop < videoTop) {
+    video.classList.add("playing");
+  } else {
+    video.classList.remove("playing");
+  }
+}
+</script>
